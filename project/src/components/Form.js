@@ -1,10 +1,16 @@
 import React from 'react';
+import {connect} from 'react-redux' //connects react to redux
 
 
-const Form = () =>{
+const Form = (props) =>{
     return (<div>
         <h1>Inside Form</h1>
     </div>)
 }
 
-export default Form;
+const mapStateToProps = (state) =>{
+    return{
+        players: state.players
+ } 
+ }
+ export default connect(mapStateToProps, {})(Form);
