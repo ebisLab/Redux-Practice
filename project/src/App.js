@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="center">
       <div className="image">
-      <PlayerList />
       <Form/>
+      <PlayerList />
+ 
       {/* <Card /> */}
       </div>
 

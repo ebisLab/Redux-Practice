@@ -12,7 +12,7 @@ import{
 const initialState = {
     players: [], //allows us to use methods
     isFetching: false,
-    isPosting: false,
+    // isPosting: false,
     errors: ''
 }
 
@@ -23,12 +23,15 @@ const playerReducer =(state = initialState, action) =>{
             return{
                 ...state,
                 isFetching: true,
+                errors: ''
             }
         case FETCH_SUCCESS:
             return{
                 ...state,
-                players: [action.payload],
+                players: action.payload,
                 isFetching: false,
+                errors: ''
+
             }
         case FETCH_FAIL:
             return{
@@ -39,12 +42,15 @@ const playerReducer =(state = initialState, action) =>{
         case POST_DATA:
             return{
                 ...state,
-                isPosting:true
+                players: [...state.players],
+                isPosting:true,
+                errors: ''
+
             }
         case POST_SUCCESS:
             return{
                 ...state,
-                players: [...state.players, action.payload],
+                players: action.payload,
                 isPosting: false
             }
         case POST_FAIL:

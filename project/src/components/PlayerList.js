@@ -15,8 +15,16 @@ const PlayerList = (props) =>{
     }, [])
 
     return (<div>
-       <h1>Inside PlayerList</h1>
-       <Card />
+       <h1 className="title">Inside PlayerList -- Soccer Player app</h1>
+       <div className="card-container"> sky
+        {props.players.map(player => (
+            <>
+ <Card key={player.id} player={player} />
+        {/* <div key={player.id} player={player}>Lebowsky</div> */}
+        </>
+        ))}
+       </div>
+       {/* <Card /> */}
     </div>)
 }
 
