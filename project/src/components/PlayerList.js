@@ -26,6 +26,7 @@ const mapStateToProps = (state) =>{
     //    state: state.state,
     //    isFetching: state.isFetching,
     players: state.players,
+    isFetching: state.isFetching,
        errors: state.errors
 } 
 }

@@ -3,7 +3,7 @@ const initialState = {
     players: [], //allows us to use methods
     isFetching: false,
     isPosting: false,
-    error: ''
+    errors: ''
 }
 
 const playerReducer =(state = initialState, action) =>{
