@@ -14,8 +14,9 @@ const PlayerList = (props) =>{
 
 const mapStateToProps = (state) =>{
    return{
-       state: state.state,
-       isFetching: state.isFetching,
+    //    state: state.state,
+    //    isFetching: state.isFetching,
+    players: state.players,
        errors: state.errors
 } 
 }
