@@ -13,7 +13,8 @@ const Form = (props) =>{
     })
 
     const inputHandler = e =>{
-setPlayer({[e.target.name]: e.target.value})
+        e.preventDefault()
+setPlayer({...player, [e.target.name]: e.target.value})
     }
 
     const submitHandler = e =>{

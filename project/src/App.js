@@ -9,9 +9,11 @@ import Card from './components/Card';
 function App() {
   return (
     <div className="center">
+      <div className="image">
       <PlayerList />
       <Form/>
-      <Card />
+      {/* <Card /> */}
+      </div>
 
       <h1>Soccer Players</h1>
       <div>Welcome to the app</div>
