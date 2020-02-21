@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {connect} from 'react-redux' //connects react to redux
 
+import {postPlayers} from '../actions'
+
 
 const Form = (props) =>{
 
@@ -16,7 +18,7 @@ setPlayer({[e.target.name]: e.target.value})
 
     const submitHandler = e =>{
         e.preventDefault();
-        // props: postPlayers
+        props.postPlayers(player) //actions
     }
     return (<div>
         <h1>Inside Form</h1>
@@ -61,4 +63,4 @@ const mapStateToProps = (state) =>{
         errors: state.errors
  } 
  }
- export default connect(mapStateToProps, {})(Form);
+ export default connect(mapStateToProps, {postPlayers})(Form);
